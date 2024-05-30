@@ -10,7 +10,7 @@
       let maliciousData = {
         isPostaMessage: true,
         topic: "malicious-topic",
-        content: "<script>alert('XSS via postMessage');</script>"
+        content: "<script>confirm(1)
       };
 
       // Send the malicious message to the iframe

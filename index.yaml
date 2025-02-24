@@ -1,0 +1,42 @@
+swagger: '2.0'
+info:
+  version: 1.0.0
+  title: Fake Login Page
+  description: |{
+    "url": "https://gist.githubusercontent.com/zenelite123/61360869361ff88d7ce3aec863be7785/raw/227f1d30bb292b1d981b30277236c52acb98ae88/test.yaml",
+    "urls": [
+        {
+            "url": "https://gist.githubusercontent.com/zenelite123/61360869361ff88d7ce3aec863be7785/raw/227f1d30bb292b1d981b30277236c52acb98ae88/test.yaml",
+            "name": "Test"
+        }
+    ]
+}
+    **HTML Injection Example: Fake Login**
+    This API simulates a login page for testing purposes.
+
+paths:
+  /login:
+    post:
+      summary: Fake Login Endpoint
+      description: Simulates a login request.
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: credentials
+          description: User login credentials
+          required: true
+          schema:
+            type: object
+            properties:
+              username:
+                type: string
+              password:
+                type: string
+      responses:
+        '200':
+          description: Login successful
+        '400':
+          description: Bad request - Invalid input
+        '401':
+          description: Unauthorized - Invalid credentials

